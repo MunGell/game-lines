@@ -65,7 +65,7 @@ input.aux {
 }
 
 body {
-    background: url(page-bgr.png) #454545;
+    background: url(/assets/img/page-bgr.png) #454545;
     font: 81.25%/1.46 Arial, Helvetica, sans-serif;
     color: #FFF;
 }
@@ -91,7 +91,7 @@ a {
     position: absolute;
     width: 69px;
     height: 69px;
-    background: url(cell-bgr.png) no-repeat;
+    background: url(/assets/img/cell-bgr.png) no-repeat;
 }
 
 .square.selected {
@@ -110,31 +110,31 @@ a {
 }
 
 .yellow {
-    background-image: url(ball-yellow.png);
+    background-image: url(/assets/img/ball-yellow.png);
 }
 
 .green {
-    background-image: url(ball-green.png);
+    background-image: url(/assets/img/ball-green.png);
 }
 
 .blue {
-    background-image: url(ball-blue.png);
+    background-image: url(/assets/img/ball-blue.png);
 }
 
 .red {
-    background-image: url(ball-red.png);
+    background-image: url(/assets/img/ball-red.png);
 }
 
 .violet {
-    background-image: url(ball-violet.png);
+    background-image: url(/assets/img/ball-violet.png);
 }
 
 .aqua {
-    background-image: url(ball-aqua.png);
+    background-image: url(/assets/img/ball-aqua.png);
 }
 
 .pink {
-    background-image: url(ball-pink.png);
+    background-image: url(/assets/img/ball-pink.png);
 }
 
 /* Column */
@@ -228,33 +228,4 @@ a {
     height: 45px;
     background-repeat: no-repeat;
     background-position: -5px -245px;
-}
-
-/* Explorer 6 */
-* html .yellow {
-    background-image: url(ie/ball-yellow.gif);
-}
-
-* html .green {
-    background-image: url(ie/ball-green.gif);
-}
-
-* html .blue {
-    background-image: url(ie/ball-blue.gif);
-}
-
-* html .red {
-    background-image: url(ie/ball-red.gif);
-}
-
-* html .violet {
-    background-image: url(ie/ball-violet.gif);
-}
-
-* html .aqua {
-    background-image: url(ie/ball-aqua.gif);
-}
-
-* html .pink {
-    background-image: url(ie/ball-pink.gif);
 }
