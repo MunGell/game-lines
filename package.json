@@ -1,0 +1,24 @@
+{
+    "name": "lines",
+    "version": "0.0.1",
+    "description": "Lines for mobile",
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "gulp": "*",
+        "gulp-less": "*",
+        "gulp-copy": "*",
+        "gulp-csso": "*",
+        "gulp-size": "*",
+        "gulp-util": "*",
+        "gulp-watch": "*",
+        "gulp-uglify": "*",
+        "gulp-filter": "*",
+        "gulp-concat": "*",
+        "gulp-rename": "*",
+        "gulp-flatten": "*",
+        "gulp-connect": "*",
+        "gulp-cloudfiles": "*",
+        "gulp-load-plugins": "*"
+    }
+}
