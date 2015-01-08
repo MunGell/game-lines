@@ -11,11 +11,9 @@
         linesGrid.init()
     });
 
-    // @todo: refactor with each()
-    $(".js-double-toggle").click(function() {
-        $(this).find(".js-first-toggle").toggleClass("js-hidden");
-        $(this).find(".js-second-toggle").toggleClass("js-hidden");
+    $(".js-toggles").click(function() {
+        $(this).find(".js-toggle").each(function(){
+            $(this).toggleClass("js-hidden");
+        });
     });
-
-
 })(jQuery, _);
