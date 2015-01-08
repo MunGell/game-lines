@@ -27,8 +27,8 @@ Line.prototype = {
             ball.aim = 0;
             animation.items.push(ball);
         }
-        Scores.current += this.items.length * 2;
-        animation.items.push(Scores);
+        Score.current += this.items.length * 2;
+        animation.items.push(Score);
         linesGrid.makeTurn = false;
         animation.onfinish = "linesGrid.checkLines()";
         animation.start();

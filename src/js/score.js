@@ -1,5 +1,5 @@
 /* Scores */
-var Scores = {
+var Score = {
     init: function () {
         this.value = 0;
         this.current = 0;
@@ -31,11 +31,11 @@ var highscores = {
     },
     show: function () {
         if (this.value) {
-            if (Scores.value <= this.value) {
+            if (Score.value <= this.value) {
                 this.obj.innerHTML = this.value;
             }
-            if (Scores.value > this.value) {
-                this.obj.innerHTML = Scores.value;
+            if (Score.value > this.value) {
+                this.obj.innerHTML = Score.value;
                 this.save();
             }
         } else {
@@ -43,6 +43,6 @@ var highscores = {
         }
     },
     save: function () {
-        Cookies.set("highscore", Scores.value);
+        Cookies.set("highscore", Score.value);
     }
 };

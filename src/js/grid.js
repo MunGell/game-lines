@@ -20,7 +20,7 @@ var linesGrid = {
             }
         }
         Preview.init();
-        Scores.init();
+        Score.init();
         if (this.ready) {
             Cookies.expire("savedgame");
         } else {
@@ -101,7 +101,7 @@ var linesGrid = {
             }
         }
         if (balls.length < 81) {
-            var saved = balls.join("-") + "~" + Preview.items.join("-") + "~" + Scores.value;
+            var saved = balls.join("-") + "~" + Preview.items.join("-") + "~" + Score.value;
             Cookies.set("savedgame", saved);
         } else {
             Cookies.expire("savedgame");
@@ -121,8 +121,8 @@ var linesGrid = {
             }
             Preview.items = values[1].split("-");
             Preview.update();
-            Scores.value = parseInt(values[2]);
-            Scores.obj.innerHTML = Scores.value;
+            Score.value = parseInt(values[2]);
+            Score.obj.innerHTML = Score.value;
             this.makeTurn = false;
             animation.start();
         } else {
