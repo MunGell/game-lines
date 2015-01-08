@@ -1,0 +1,17 @@
+// Responsive media queries
+@mq-all: ~"all";
+@mq-mobile: @mq-all;
+@mq-mobile-only: ~"(max-width: 740px)";
+@mq-tablet: ~"all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)";
+@mq-tablet-only: ~"(min-width: 740px) and (min-device-width: 740px) and (max-width: 980px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)";
+@mq-normal: ~"all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)";
+@mq-normal-only: ~"(min-width: 980px) and (min-device-width: 980px) and (max-width: 1220px), (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)";
+@mq-wide: ~"all and (min-width: 1220px)";
+
+@square-size-mobile: 30px;
+@square-size-tablet: 40px;
+@square-size-normal: 50px;
+@square-size-wide: 70px;
+
+@square-size: @square-size-mobile;
+@square-margin: 1px;

@@ -1,6 +1,10 @@
 /* DOM objects */
 function ID(id) {
     return document.getElementById(id);
+};
+
+function Class(className) {
+    return document.getElementsByClassName(className)[0];
 }
 
 function getNodesOf(obj, str) {
@@ -12,7 +16,7 @@ function getNodesOf(obj, str) {
         if (!tags || tags[item.tagName]) result.push(item);
     }
     return result;
-}
+};
 
 function getPositionOf(obj) {
     var pos = {x: 0, y: 0};
@@ -21,14 +25,14 @@ function getPositionOf(obj) {
         pos.y += p.offsetTop;
     }
     return pos;
-}
+};
 
 function makeVisible(obj) {
     obj.style.visibility = "visible";
-}
+};
 function makeHidden(obj) {
     obj.style.visibility = "hidden";
-}
+};
 
 /* Events */
 function processEvent(obj, method) {
@@ -37,11 +41,11 @@ function processEvent(obj, method) {
         event = event || window.event;
         obj[method].apply(obj, [event].concat(args));
     };
-}
+};
 function stopEvent(event) {
     event = event || window.event;
     event.cancelBubble = true;
-}
+};
 
 /* className editor */
 function classNameOf(obj) {
@@ -49,7 +53,7 @@ function classNameOf(obj) {
     cne.value = obj.className;
     cne.obj = obj;
     return cne;
-}
+};
 
 var classNameEditor = {
     seek: function (str) {
@@ -75,49 +79,50 @@ var classNameEditor = {
 /* Prototypes */
 String.prototype.seek = function (str) {
     return (this.indexOf(str) > -1);
-}
+};
 
 String.prototype.toHash = function (spacer) {
     var s = spacer || " ", hash = {};
     var a = this.split(s), i = a.length;
     while (i-- > 0) hash[a[i]] = true;
     return hash;
-}
+};
 String.prototype.trim = function () {
     return this.replace(/^\s+|\s+$/g, "");
-}
+};
 
 Number.prototype.decline = function (word) {
     var n = this + " ", p = word.split(/- |,/g);
     var pn = n.match(/([^1]|^)1 /) ? 1 : (n.match(/([^1]|^)[234] /) ? 2 : 3);
     return n + p[0] + p[pn];
-}
+};
 
 /* Cookies */
-var cookies = {
-    path: "/",
-    dates: {},
-    keep: function (name, period) {
-        if (period) {
-            var date = new Date();
-            date.setDate(date.getDate() + period);
-            this.dates[name] = date.toGMTString();
-        } else {
-            this.dates[name] = null;
-        }
-    },
-    get: function (name) {
-        var s = ";", cookies = s + document.cookie.toString().replace("; ", s);
-        var pos = cookies.indexOf(s + name + "=");
-        return (pos == -1) ? null : cookies.substr(pos + name.length + 2).split(s, 1)[0]
-    },
-    set: function (name, value) {
-        var date = this.dates[name];
-        var expires = date ? ("expires=" + date + ";") : "";
-        document.cookie = name + "=" + value + ";" + expires + "path=" + this.path;
-    },
-    remove: function (name) {
-        document.cookie = name + "=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=" + this.path;
-    }
-}
-
+//var cookies = {
+//    path: "/",
+//    dates: {},
+//    keep: function (name, period) {
+//        if (period) {
+//            var date = new Date();
+//            date.setDate(date.getDate() + period);
+//            this.dates[name] = date.toGMTString();
+//        } else {
+//            this.dates[name] = null;
+//        }
+//    },
+//    get: function (name) {
+//        var s = ";", cookies = s + document.cookie.toString().replace("; ", s);
+//        var pos = cookies.indexOf(s + name + "=");
+//        return (pos == -1) ? null : cookies.substr(pos + name.length + 2).split(s, 1)[0]
+//    },
+//    set: function (name, value) {
+//        console.log(name + " " + value);
+//        var date = this.dates[name];
+//        var expires = date ? ("expires=" + date + ";") : "";
+//        document.cookie = name + "=" + value + ";" + expires + "path=" + this.path;
+//        console.log(document.cookie);
+//    },
+//    remove: function (name) {
+//        document.cookie = name + "=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=" + this.path;
+//    }
+//};

@@ -1,0 +1,23 @@
+.square-sizing(@square-sizing-size, @square-sizing-margin) {
+  margin: @square-sizing-margin;
+
+  .size(@square-sizing-size, @square-sizing-size);
+
+  .square-col-calc(@index) when (@index > 0) {
+    @el: ~".square-col@{index}";
+    &@{el} {
+      left: (@square-sizing-size + @square-sizing-margin*2)*(@index - 1) - 2
+    }
+    .square-col-calc(@index - 1);
+  }
+  .square-col-calc(9);
+
+  .square-row-calc(@index) when (@index > 0) {
+    @el: ~".square-row@{index}";
+    &@{el} {
+      top: (@square-sizing-size + @square-sizing-margin*2)*(@index - 1) - 1
+    }
+    .square-row-calc(@index - 1);
+  }
+  .square-row-calc(9);
+}
