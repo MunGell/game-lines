@@ -13,13 +13,13 @@ var Score = {
             this.obj.innerHTML = this.value;
         }
         if (!this.current) {
-            highscores.show();
+            highscore.show();
         }
         return this.current;
     }
 };
 
-var highscores = {
+var highscore = {
     active: false,
     init: function () {
         this.obj = Class("highscore");

@@ -23,10 +23,6 @@ var linesGrid = {
         Score.init();
         if (this.ready) {
             Cookies.expire("savedgame");
-        } else {
-            //cookies.path = "/lines";
-            //cookies.keep("savedgame", 30);
-            //cookies.keep("highscores", 1000);
         }
         this.ready = true;
         this.loadGame();
@@ -129,6 +125,6 @@ var linesGrid = {
             this.makeTurn = true;
             this.turn();
         }
-        highscores.init();
+        highscore.init();
     }
 };
