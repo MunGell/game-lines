@@ -30,7 +30,7 @@ Line.prototype = {
         Score.current += this.items.length * 2;
         animation.items.push(Score);
         linesGrid.makeTurn = false;
-        animation.onfinish = "linesGrid.checkLines()";
+        animation.onfinish = 'linesGrid.checkLines()';
         animation.start();
     },
     replace: function (items) {

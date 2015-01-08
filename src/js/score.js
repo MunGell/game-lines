@@ -3,7 +3,7 @@ var Score = {
     init: function () {
         this.value = 0;
         this.current = 0;
-        this.obj = Class("score");
+        this.obj = Class('score');
         this.obj.innerHTML = this.value;
     },
     animate: function () {
@@ -22,8 +22,8 @@ var Score = {
 var highscore = {
     active: false,
     init: function () {
-        this.obj = Class("highscore");
-        var record = Cookies.get("highscore");
+        this.obj = Class('highscore');
+        var record = Cookies.get('highscore');
         if (record) {
             this.value = parseInt(record);
             this.show();
@@ -43,6 +43,6 @@ var highscore = {
         }
     },
     save: function () {
-        Cookies.set("highscore", Score.value);
+        Cookies.set('highscore', Score.value);
     }
 };

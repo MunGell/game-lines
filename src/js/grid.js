@@ -3,7 +3,7 @@ var linesGrid = {
     checkSquares: [],
     init: function () {
         if (!this.ready) {
-            this.obj = Class("grid");
+            this.obj = Class('grid');
             this.squares = [];
         }
         this.unselect();
@@ -22,7 +22,7 @@ var linesGrid = {
         Preview.init();
         Score.init();
         if (this.ready) {
-            Cookies.expire("savedgame");
+            Cookies.expire('savedgame');
         }
         this.ready = true;
         this.loadGame();
@@ -39,7 +39,7 @@ var linesGrid = {
     },
     unselect: function () {
         if (this.selected) {
-            classNameOf(this.selected.obj).remove("selected");
+            classNameOf(this.selected.obj).remove('selected');
             this.selected = null;
         }
     },
@@ -64,7 +64,7 @@ var linesGrid = {
             this.add();
         }
         this.makeTurn = false;
-        animation.onfinish = "linesGrid.checkLines()";
+        animation.onfinish = 'linesGrid.checkLines()';
         animation.start();
     },
     checkLines: function () {
@@ -97,25 +97,25 @@ var linesGrid = {
             }
         }
         if (balls.length < 81) {
-            var saved = balls.join("-") + "~" + Preview.items.join("-") + "~" + Score.value;
-            Cookies.set("savedgame", saved);
+            var saved = balls.join('-') + '~' + Preview.items.join('-') + '~' + Score.value;
+            Cookies.set('savedgame', saved);
         } else {
-            Cookies.expire("savedgame");
-            alert("Game over");
+            Cookies.expire('savedgame');
+            alert('Game over');
         }
     },
     loadGame: function () {
-        var summary = Cookies.get("savedgame");
+        var summary = Cookies.get('savedgame');
         if (summary) {
-            var values = summary.split("~");
-            var balls = values[0].split("-");
+            var values = summary.split('~');
+            var balls = values[0].split('-');
             for (var i = 0, lim = balls.length; i < lim; i++) {
                 var str = balls[i];
                 var x = parseInt(str.charAt(0));
                 var y = parseInt(str.charAt(1));
                 this.squares[x][y].createBall(str.substr(2));
             }
-            Preview.items = values[1].split("-");
+            Preview.items = values[1].split('-');
             Preview.update();
             Score.value = parseInt(values[2]);
             Score.obj.innerHTML = Score.value;

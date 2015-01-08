@@ -1,8 +1,8 @@
 /* Colors for next turn */
 var Preview = {
-    colors: ["yellow", "green", "red", "blue", "violet", "aqua", "pink"],
+    colors: ['yellow', 'green', 'red', 'blue', 'violet', 'aqua', 'pink'],
     init: function () {
-        var list = Class("preview");
+        var list = Class('preview');
         this.nodes = getNodesOf(list);
         this.items = [];
         for (var i = 0; i < 3; i++) {

@@ -27,9 +27,9 @@ var animation = {
         }
         if (this.items.length) {
             this.active = true;
-            this.timer = setTimeout("animation.apply()", 50);
+            this.timer = setTimeout('animation.apply()', 50);
         } else if (this.onfinish) {
-            this.endTimer = setTimeout("animation.end()", 300);
+            this.endTimer = setTimeout('animation.end()', 300);
             setTimeout(this.onfinish, 250);
             this.onfinish = null;
         } else {

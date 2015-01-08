@@ -28,10 +28,10 @@ function getPositionOf(obj) {
 };
 
 function makeVisible(obj) {
-    obj.style.visibility = "visible";
+    obj.style.visibility = 'visible';
 };
 function makeHidden(obj) {
-    obj.style.visibility = "hidden";
+    obj.style.visibility = 'hidden';
 };
 
 /* Events */
@@ -57,16 +57,16 @@ function classNameOf(obj) {
 
 var classNameEditor = {
     seek: function (str) {
-        var s = " ", spaced = s + this.value + s;
+        var s = ' ', spaced = s + this.value + s;
         return spaced.seek(s = str + s);
     },
     add: function (str) {
         if (!this.value.seek(str))
-            this.obj.className = this.value + " " + str;
+            this.obj.className = this.value + ' ' + str;
     },
     remove: function (str) {
         if (!this.value.seek(str)) return;
-        var s = " ", spaced = s + this.value + s;
+        var s = ' ', spaced = s + this.value + s;
         var sample = new RegExp(s + str + s);
         this.obj.className = spaced.replace(sample, s).trim();
     },
@@ -82,17 +82,17 @@ String.prototype.seek = function (str) {
 };
 
 String.prototype.toHash = function (spacer) {
-    var s = spacer || " ", hash = {};
+    var s = spacer || ' ', hash = {};
     var a = this.split(s), i = a.length;
     while (i-- > 0) hash[a[i]] = true;
     return hash;
 };
 String.prototype.trim = function () {
-    return this.replace(/^\s+|\s+$/g, "");
+    return this.replace(/^\s+|\s+$/g, '');
 };
 
 Number.prototype.decline = function (word) {
-    var n = this + " ", p = word.split(/- |,/g);
+    var n = this + ' ', p = word.split(/- |,/g);
     var pn = n.match(/([^1]|^)1 /) ? 1 : (n.match(/([^1]|^)[234] /) ? 2 : 3);
     return n + p[0] + p[pn];
 };

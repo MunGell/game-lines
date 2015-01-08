@@ -2,10 +2,10 @@
 function Square(x, y) {
     this.x = x;
     this.y = y;
-    var obj = document.createElement("div");
-    obj.className = "square square-col" + (x+1) + " square-row" + (y+1);
-    this.obj = Class("grid").appendChild(obj);
-    this.obj.onclick = processEvent(this, "click");
+    var obj = document.createElement('div');
+    obj.className = 'square square-col' + (x+1) + ' square-row' + (y+1);
+    this.obj = Class('grid').appendChild(obj);
+    this.obj.onclick = processEvent(this, 'click');
     this.ball = null;
 }
 
@@ -40,7 +40,7 @@ Square.prototype = {
         pathfinder.process();
         linesGrid.unselect();
         linesGrid.selected = this;
-        classNameOf(this.obj).add("selected");
+        classNameOf(this.obj).add('selected');
     },
     invite: function () {
         var clone = linesGrid.selected.ball;
@@ -57,7 +57,7 @@ Square.prototype = {
         linesGrid.makeTurn = true;
         linesGrid.checkSquares.push(this);
         linesGrid.unselect();
-        animation.onfinish = "linesGrid.checkLines()";
+        animation.onfinish = 'linesGrid.checkLines()';
         animation.start();
     },
     findSteps: function () {

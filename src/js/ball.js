@@ -2,8 +2,8 @@
 
 function Ball(color, state) {
     this.color = color;
-    this.obj = document.createElement("div");
-    this.obj.className = "ball ball-responsive ball-" + color;
+    this.obj = document.createElement('div');
+    this.obj.className = 'ball ball-responsive ball-' + color;
     this.state = state || 0;
     this.active = (this.state < 8);
     this.aim = this.active ? 7 : 0;
@@ -14,10 +14,10 @@ Ball.prototype = {
         var y = this.state;
         if (y > 0 && y < 8) {
             if (!this.active) y = 1;
-            this.obj.style.backgroundPosition = "0 " + (y - 7) * this.obj.offsetWidth* 1.1 + "px";
-            this.obj.style.visibility = "visible";
+            this.obj.style.backgroundPosition = '0 ' + (y - 7) * this.obj.offsetWidth* 1.1 + 'px';
+            this.obj.style.visibility = 'visible';
         } else {
-            this.obj.style.visibility = "hidden";
+            this.obj.style.visibility = 'hidden';
         }
     },
     animate: function () {
