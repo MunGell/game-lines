@@ -96,33 +96,3 @@ Number.prototype.decline = function (word) {
     var pn = n.match(/([^1]|^)1 /) ? 1 : (n.match(/([^1]|^)[234] /) ? 2 : 3);
     return n + p[0] + p[pn];
 };
-
-/* Cookies */
-//var cookies = {
-//    path: "/",
-//    dates: {},
-//    keep: function (name, period) {
-//        if (period) {
-//            var date = new Date();
-//            date.setDate(date.getDate() + period);
-//            this.dates[name] = date.toGMTString();
-//        } else {
-//            this.dates[name] = null;
-//        }
-//    },
-//    get: function (name) {
-//        var s = ";", cookies = s + document.cookie.toString().replace("; ", s);
-//        var pos = cookies.indexOf(s + name + "=");
-//        return (pos == -1) ? null : cookies.substr(pos + name.length + 2).split(s, 1)[0]
-//    },
-//    set: function (name, value) {
-//        console.log(name + " " + value);
-//        var date = this.dates[name];
-//        var expires = date ? ("expires=" + date + ";") : "";
-//        document.cookie = name + "=" + value + ";" + expires + "path=" + this.path;
-//        console.log(document.cookie);
-//    },
-//    remove: function (name) {
-//        document.cookie = name + "=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=" + this.path;
-//    }
-//};
