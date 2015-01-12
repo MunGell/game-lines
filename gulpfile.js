@@ -2,15 +2,11 @@
 
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
-//
-//var jsFilter = plugins.filter(['*.js']);
-//var cssFilter = plugins.filter(['*.css']);
-//var jsToMinifyFilter = plugins.filter(['*.js', '!*.min.js']);
 
 var onError = function (error) {
     plugins.util.log(error);
     this.emit('end');
-}
+};
 
 gulp.task('bower-js', function () {
 
@@ -57,7 +53,7 @@ gulp.task('jsmin', function () {
         'src/js/init.js'
     ])
         .pipe(plugins.concat('app.min.js'))
-        //.pipe(plugins.uglify()).on('error', onError)
+        .pipe(plugins.uglify()).on('error', onError)
         .pipe(gulp.dest('assets/js'))
 });
 
@@ -80,15 +76,8 @@ gulp.task('deploy', function () {
     var config = JSON.parse(fs.readFileSync('./deploy.json'));
 
     gulp.src([
-        '**/*',
-        '!{node_modules,node_modules/**}',
-        '!{less,less/**}',
-        '!{vendor,vendor/**}',
-        '!{bower,package}.json',
-        '!deploy.{json,json.skel}',
-        '!gulpfile.js',
-        '!README.md',
-        '!.*'
+        'assets',
+        'index.html'
     ])
         .pipe(plugins.cloudfiles(config, {'read': false}));
 });

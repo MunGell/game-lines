@@ -1,0 +1,6 @@
+{
+    "username": "YOUR-RACKSPACE-USERNAME",
+    "apiKey": "YOUR-RACKSPACE-APIKEY",
+    "region": "YOUR-RACKSPACE-REGION",
+    "container": "YOUR-RACKSPACE-CONTAINER"
+}
