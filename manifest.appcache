@@ -1,0 +1,22 @@
+CACHE MANIFEST
+
+CACHE:
+index.html
+assets/css/app.min.css
+assets/js/app.min.js
+assets/js/vendor.min.js
+
+assets/img/apple-touch-icon.png
+assets/img/apple-touch-icon-400.png
+assets/img/ball-aqua.png
+assets/img/ball-pink.png
+assets/img/ball-yellow.png
+assets/img/ball-blue.png
+assets/img/ball-red.png
+assets/img/ball-green.png
+assets/img/ball-violet.png
+assets/img/cell-bgr.png
+assets/img/new-game.png
+assets/img/chrome-icon.png
+assets/img/page-bgr.png
+assets/img/favicon.png
