@@ -25,7 +25,8 @@ $ gulp
 
 ## ToDo
 
-- Better README
-- Translations
-- JS code modularisation
-- Better images
+- Change cookies to local storage (for mobile app functionality)
+- Improve README
+- Add interface translations
+- Incapsulate JS code modules
+- Improve images + Add images for color-blind people (with numbers on the balls)
