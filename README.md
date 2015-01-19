@@ -29,5 +29,3 @@ $ gulp
 - Translations
 - JS code modularisation
 - Better images
-- Apple/Android icons
-- Prefetch all images in first run
