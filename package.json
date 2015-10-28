@@ -1,24 +1,30 @@
 {
-    "name": "lines",
-    "version": "0.0.1",
-    "description": "Lines for mobile",
-    "author": "",
-    "license": "MIT",
-    "devDependencies": {
-        "gulp": "*",
-        "gulp-less": "*",
-        "gulp-copy": "*",
-        "gulp-csso": "*",
-        "gulp-size": "*",
-        "gulp-util": "*",
-        "gulp-watch": "*",
-        "gulp-uglify": "*",
-        "gulp-filter": "*",
-        "gulp-concat": "*",
-        "gulp-rename": "*",
-        "gulp-flatten": "*",
-        "gulp-connect": "*",
-        "gulp-cloudfiles": "*",
-        "gulp-load-plugins": "*"
-    }
+  "name": "lines",
+  "version": "0.0.1",
+  "description": "Lines for mobile",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "gulp": "*",
+    "gulp-cloudfiles": "*",
+    "gulp-concat": "*",
+    "gulp-connect": "*",
+    "gulp-copy": "*",
+    "gulp-csso": "*",
+    "gulp-filter": "*",
+    "gulp-flatten": "*",
+    "gulp-less": "*",
+    "gulp-load-plugins": "*",
+    "gulp-rename": "*",
+    "gulp-size": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "tape": "^4.2.2"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1"
+  }
 }
